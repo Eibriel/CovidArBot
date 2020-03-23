@@ -184,16 +184,28 @@ preguntas_frecuentes = {
 
 }
 
-faqs = []
-faq_answers = {}
-i = 0
-for pfi in preguntas_frecuentes:
-    command = "/faq{}".format(i)
-    faqs.append(" - {} {}".format(pfi, command))
-    faq_answers[command] = [pfi, "-"] + preguntas_frecuentes[pfi] + ["\nPreguntas /Preguntas"]
-    i += 1
 
-menu_principal = "\nMenú principal /start"
+mitos_oms = {
+    ""
+}
+
+
+def faq2menu(preguntas_frecuentes):
+    faqs = []
+    faq_answers = {}
+    i = 0
+    for pfi in preguntas_frecuentes:
+        command = "/faq{}".format(i)
+        faqs.append(" - {} {}".format(pfi, command))
+        faq_answers[command] = [pfi, "-"] + preguntas_frecuentes[pfi] + ["\nPreguntas /Preguntas"]
+        i += 1
+    return faqs, faq_answers
+
+
+faqs, faq_answers = faq2menu(preguntas_frecuentes)
+
+
+menu_principal = "\n🔸 Menú principal /start"
 cuidados = " - Cuidados /Cuidados"
 aislamiento = " - Aislamiento /Aislamiento"
 medidas = " - Medidas /Medidas"
@@ -206,22 +218,26 @@ answers = {
         "- https://github.com/Eibriel/CovidArBot"
     ],
     "/start": [
-        "¿Qué podemos hacer para cuidarnos? /Cuidados",
-        "¿Qué medidas está tomando el gobierno? /Medidas",
-        "Informe diario /Informe",
-        "Preguntas frecuentes /Preguntas",
-        "Teléfonos y contactos útiles /Telefonos",
-        "Plan Operativo de preparación y respuesta al COVID-19 /Plan",
-        "Hacete el autotest del Coronavirus /Autotest",
+        "Información del <b>Ministerio de Salud</b> y la <b>Organización Mundial de la Salud</b>",
         "",
-        "Última actualización: 2020-03-23",
+        "🔹 ¿Qué podemos hacer para cuidarnos? /Cuidados",
+        "🔹 ¿Qué medidas está tomando el gobierno? /Medidas",
+        "🔹 Informe diario /Informe",
+        "🔹 Preguntas frecuentes /Preguntas",
+        "🔹 Teléfonos y contactos útiles /Telefonos",
+        "🔹 Plan Operativo de preparación y respuesta al COVID-19 /Plan",
+        "🔹 Hacete el autotest del Coronavirus /Autotest",
+        "",
+        "Última actualización: <b>2020-03-23</b>",
         menu_principal
     ],
     # Cuidados
     "/Cuidados": [
-        "Población general /General",
-        "Mayores de 60 años, embarazadas y personas con patologías crónicas /Mayores",
-        "Aislamiento para casos confirmados y casos sospechosos /Aislamiento",
+        "<b>¿Qué podemos hacer para cuidarnos?</b>",
+        "",
+        "🔹 Población general /General",
+        "🔹 Mayores de 60 años, embarazadas y personas con patologías crónicas /Mayores",
+        "🔹 Aislamiento para casos confirmados y casos sospechosos /Aislamiento",
         "",
         "https://www.youtube.com/watch?v=uyv9lprlx3k",
         menu_principal
@@ -232,6 +248,7 @@ answers = {
         "Algunos casos pueden presentar complicaciones y requerir hospitalización.",
         "Puede afectar a cualquier persona, el riesgo de complicaciones aumenta en mayores de 60 años y personas con afecciones preexistentes (enfermedad cardiovascular, diabetes y enfermedad respiratoria crónica entre otras).",
         "En caso de presentar síntomas, aunque sean leves, consultar telefónicamente al sistema de salud. Ejemplo: 107 en CABA, 148 en Provincia de Buenos Aires, 0800-222-1002 a nivel nacional.",
+        "PHOTO|https://ibin.co/5GcehnJxTU2B.jpg|Cuidados generales",
         menu_principal + cuidados
     ],
     # Cuidados -> Mayores
@@ -258,9 +275,9 @@ answers = {
     "/LicenciaMayores60": ["https://www.argentina.gob.ar/sites/default/files/207.pdf"],
     # Cuidados -> Aislamiento
     "/Aislamiento": [
-        "Casos confirmados /Confirmados",
-        "Casos sospechosos /Sospechosos",
-        "Indicaciones para viajeros (en el país). Aislamiento preventivo /Viajeros",
+        "🔹 Casos confirmados /Confirmados",
+        "🔹 Casos sospechosos /Sospechosos",
+        "🔹 Indicaciones para viajeros (en el país). Aislamiento preventivo /Viajeros",
         menu_principal + cuidados
     ],
     # Cuidados -> Aislamiento -> Confirmados
@@ -412,7 +429,12 @@ answers = {
         menu_principal + medidas
     ],
     # Informe diario
-    "/Informe": ["https://www.argentina.gob.ar/coronavirus/informe-diario"],
+    "/Informe": [
+        "Informe oficial: https://www.argentina.gob.ar/coronavirus/informe-diario",
+        "",
+        "PHOTO|https://ibin.co/5GcXDq32LIso.png|Fuente del gráfico El Gato y la Caja",
+        menu_principal
+    ],
     # Preguntas frecuentes
     "/Preguntas": faqs + [menu_principal],
     # Telefonos
@@ -446,9 +468,17 @@ while 1:
 
         print(input_text)
         msg_str = "\n".join(answers["/start"])
+        photos = []
         if input_text in answers:
-            msg_str = "\n".join(answers[input_text])
+            msg_str = ""
+            for line in answers[input_text]:
+                if line.startswith("PHOTO|"):
+                    photos.append(line.split("|"))
+                else:
+                    msg_str += line + "\n"
         print(msg_str)
         print()
 
         telegram_conection.sendMessage(chat_id, msg_str)
+        for photo in photos:
+            telegram_conection.sendPhoto(chat_id, photo[1], photo[2])

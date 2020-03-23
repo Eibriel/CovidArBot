@@ -20,10 +20,11 @@ class telegram:
         r = self.send_to_bot('sendMessage', data=msg)
         return r
 
-    def sendPhoto(self, chat_id, image_url):
+    def sendPhoto(self, chat_id, image_url, caption):
         msg = {
             'chat_id': chat_id,
             'photo': image_url,
+            'caption': caption
         }
         r = self.send_to_bot('sendPhoto', data=msg)
 
