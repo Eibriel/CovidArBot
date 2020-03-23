@@ -1,4 +1,3 @@
-cd /home/gabriel/Documentos/Trabajo/Eibriel/Proyectos/CovidArBot/info/
 wget https://www.argentina.gob.ar/coronavirus/preguntasfrecuentes
 wget https://www.argentina.gob.ar/salud/coronavirus-COVID-19
 wget https://www.argentina.gob.ar/coronavirus/cuidarnos
