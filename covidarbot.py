@@ -198,6 +198,13 @@ cuidados = " - Cuidados /Cuidados"
 aislamiento = " - Aislamiento /Aislamiento"
 medidas = " - Medidas /Medidas"
 answers = {
+    "/help": [
+        "Bot informativo creado por @Eibriel",
+        "Fuentes:",
+        "- Ministerio de Salud de Argentina",
+        "Código fuente:",
+        "- https://github.com/Eibriel/CovidArBot"
+    ],
     "/start": [
         "¿Qué podemos hacer para cuidarnos? /Cuidados",
         "¿Qué medidas está tomando el gobierno? /Medidas",
@@ -205,6 +212,9 @@ answers = {
         "Preguntas frecuentes /Preguntas",
         "Teléfonos y contactos útiles /Telefonos",
         "Plan Operativo de preparación y respuesta al COVID-19 /Plan",
+        "Hacete el autotest del Coronavirus /Autotest",
+        "",
+        "Última actualización: 2020-03-23",
         menu_principal
     ],
     # Cuidados
@@ -407,7 +417,8 @@ answers = {
     "/Preguntas": faqs + [menu_principal],
     # Telefonos
     "/Telefonos": ["https://www.argentina.gob.ar/coronavirus/telefonos"],
-    "/Plan": ["https://www.argentina.gob.ar/salud/coronavirus-COVID-19/plan-operativo"]
+    "/Plan": ["https://www.argentina.gob.ar/salud/coronavirus-COVID-19/plan-operativo"],
+    "/Autotest": ["https://www.argentina.gob.ar/coronavirus/app"]
 }
 
 answers.update(faq_answers)
