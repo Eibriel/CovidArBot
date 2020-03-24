@@ -284,6 +284,7 @@ answers = {
         "Vacunarse contra la gripe y el neumococo, de acuerdo al calendario de vacunación nacional.",
         "",
         "Información sobre licencia laboral para mayores de 60 años, embarazadas y menores de 60 años con factores de riesgo /LicenciaMayores60",
+        "PHOTO|https://ibin.co/5GkUzRTrggz1.jpg|Cuidados para mayores de 65 años",
         menu_principal + cuidados
     ],
     "/LicenciaMayores60": ["https://www.argentina.gob.ar/sites/default/files/207.pdf"],
