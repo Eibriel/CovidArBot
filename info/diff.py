@@ -1,8 +1,8 @@
 import csv
 from difflib import Differ
 
-file_a = "covidar_2020-03-22.csv"
-file_b = "covidar_2020-03-23.csv"
+file_a = "covidar_2020-03-23.csv"
+file_b = "covidar_2020-03-24.csv"
 
 
 def csv2dict(filepath):
@@ -31,7 +31,7 @@ for url in dict_a:
                 new_action = character[:2]
                 #if action != new_action:
                 #    result += new_action
-                if action not in result:
+                if new_action not in result:
                     result[new_action] = ""
                 result[new_action] += character[-1]
                 action = new_action

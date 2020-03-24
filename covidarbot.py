@@ -190,32 +190,36 @@ mitos_oms = {
 }
 
 
-def faq2menu(preguntas_frecuentes):
+def faq2menu(preguntas_frecuentes, menu):
     faqs = []
     faq_answers = {}
     i = 0
     for pfi in preguntas_frecuentes:
         command = "/faq{}".format(i)
         faqs.append(" - {} {}".format(pfi, command))
-        faq_answers[command] = [pfi, "-"] + preguntas_frecuentes[pfi] + ["\nPreguntas /Preguntas"]
+        faq_answers[command] = [pfi, "-"] + preguntas_frecuentes[pfi] + menu
         i += 1
     return faqs, faq_answers
-
-
-faqs, faq_answers = faq2menu(preguntas_frecuentes)
 
 
 menu_principal = "\n🔸 Menú principal /start"
 cuidados = " - Cuidados /Cuidados"
 aislamiento = " - Aislamiento /Aislamiento"
 medidas = " - Medidas /Medidas"
+preguntas = " - Preguntas /Preguntas"
+
+
+faqs, faq_answers = faq2menu(preguntas_frecuentes, [menu_principal + preguntas])
+
+
 answers = {
     "/help": [
         "Bot informativo creado por @Eibriel",
         "Fuentes:",
         "- Ministerio de Salud de Argentina",
         "Código fuente:",
-        "- https://github.com/Eibriel/CovidArBot"
+        "- https://github.com/Eibriel/CovidArBot",
+        menu_principal
     ],
     "/start": [
         "Información del <b>Ministerio de Salud</b> y la <b>Organización Mundial de la Salud</b>",
@@ -225,8 +229,17 @@ answers = {
         "🔹 Informe diario /Informe",
         "🔹 Preguntas frecuentes /Preguntas",
         "🔹 Teléfonos y contactos útiles /Telefonos",
-        "🔹 Plan Operativo de preparación y respuesta al COVID-19 /Plan",
-        "🔹 Hacete el autotest del Coronavirus /Autotest",
+        # Eliminado el 2020-03-24
+        # "🔹 Plan Operativo de preparación y respuesta al COVID-19 /Plan",
+        # El plan operativo se reemplaza por Recomendaciones para equipos de salud
+        "🔹 Recomendaciones para equipos de salud /Salud",
+        "🔹 [Nuevo] Descargá la app de autoevaluación de síntomas de COVID-19 /Autotest",
+        "",
+        "🔹 [Nuevo] Pautas a seguir durante el aislamiento /AislamientoSocialPautas",
+        "🔹 [Nuevo] Recomendaciones para salir de casa /AislamientoSocialSalidas",
+        "🔹 [Nuevo] Para sacar al perro /AislamientoSocialPerros",
+        "",
+        "🔹 [Nuevo] Servicios y enlaces útiles mientras estés en casa /AislamientoSocialServicios",
         "",
         "Última actualización: <b>2020-03-23</b>",
         menu_principal
@@ -238,6 +251,7 @@ answers = {
         "🔹 Población general /General",
         "🔹 Mayores de 60 años, embarazadas y personas con patologías crónicas /Mayores",
         "🔹 Aislamiento para casos confirmados y casos sospechosos /Aislamiento",
+        "🔹 Indicaciones para viajeros (en el país). Aislamiento preventivo /Viajeros",
         "",
         "https://www.youtube.com/watch?v=uyv9lprlx3k",
         menu_principal
@@ -265,9 +279,9 @@ answers = {
         "",
         "<b>En la medida de lo posible, delegar la realización de mandados o compra de medicamentos a personas de confianza o del entorno familiar que no pertenezcan a los grupos de riesgo.</b>",
         "",
-        "Las personas mayores de 60 años, embarazadas o quienes están dentro de los grupos de riesgo <b>no deben convivir con quienes volvieron de zonas definidas por la Organización Mundial de la Salud como de transmisión local o comunitaria.</b>",
+        "Las personas mayores de 60 años, embarazadas o quienes están dentro de los grupos de riesgo <b>no deben convivir con personas que vengan desde el exterior.</b>",
         "",
-        "Vacunarse contra la gripe y el neumococo.",
+        "Vacunarse contra la gripe y el neumococo, de acuerdo al calendario de vacunación nacional.",
         "",
         "Información sobre licencia laboral para mayores de 60 años, embarazadas y menores de 60 años con factores de riesgo /LicenciaMayores60",
         menu_principal + cuidados
@@ -277,7 +291,6 @@ answers = {
     "/Aislamiento": [
         "🔹 Casos confirmados /Confirmados",
         "🔹 Casos sospechosos /Sospechosos",
-        "🔹 Indicaciones para viajeros (en el país). Aislamiento preventivo /Viajeros",
         menu_principal + cuidados
     ],
     # Cuidados -> Aislamiento -> Confirmados
@@ -357,11 +370,11 @@ answers = {
         "<b>Las personas que presenten síntomas compatibles con COVID-19 deberán reportarlo telefónicamente de inmediato al sistema de salud. Ejemplo: 107 en CABA, 148 en Provincia de Buenos Aires, 0800-222-1002 a nivel nacional.</b>",
         "",
         "<b>Aislamiento preventivo obligatorio</b>",
-        "Personas que regresan de zonas definidas por la Organización Mundial de la Salud como de transmisión local o comunitaria ( /Zonas ) deben mantener aislamiento domiciliario durante 14 días desde el ingreso al país.",
+        "Personas que vengan desde el exterior deben mantener aislamiento domiciliario durante 14 días desde el ingreso al país.",
         "- Deben permanecer en forma estricta en su domicilio.",
         "- No deben recibir visitas en el hogar.",
         "- No deben tener contacto estrecho con otras personas (distancia mínima de 1 metro).",
-        "- Las personas mayores de 60 años, embarazadas o quienes están dentro de los grupos de riesgo (enfermedad cardiovascular, diabetes y enfermedad respiratoria crónica, entre otras) no deben convivir con quienes volvieron de zonas definidas por la Organización Mundial de la Salud como de transmisión local o comunitaria ( /Zonas ).",
+        "- Las personas mayores de 60 años, embarazadas o quienes están dentro de los grupos de riesgo (enfermedad cardiovascular, diabetes y enfermedad respiratoria crónica, entre otras) no deben convivir con personas que vengan desde el exterior.",
         "- En la medida de lo posible, delegar la realización de mandados o compra de medicamentos a personas de confianza o del entorno familiar que no pertenezcan a grupos de riesgo.",
         "- Deben lavarse las manos con agua y jabón o alcohol en gel periódicamente.",
         "- Al toser o estornudar, deben cubrirse la nariz y la boca con el pliegue interno del codo, o usar pañuelo descartable (y desecharlo inmediatamente).",
@@ -403,6 +416,96 @@ answers = {
         "✅ Reduciendo el contacto, se reducirán las posibilidades de contagio.",
         menu_principal + medidas
     ],
+    # Medidas -> AislamientoSocial -> Pautas
+    "/AislamientoSocialPautas": [
+        "Para cuidarnos entre todos, es importante que respetemos las siguientes indicaciones:",
+        " - Que todo el grupo familiar o conviviente permanezca en el domicilio todos los días.",
+        " - Mantené 1 metro de distancia con otras personas.",
+        " - No recibas ni hagas visitas.",
+        " - Evitá transitar en la vía pública, salvo para hacer compras imprescindibles (alimentos, medicación y artículos de limpieza) o por cuestiones de salud.",
+        " - Lavate frecuentemente las manos con agua y jabón o con alcohol en gel .",
+        " - Si vas a toser o estornudar, cubrite nariz y boca con el pliegue interno del codo, o usá pañuelo descartable y tiralo inmediatamente en un cesto de residuos.",
+        " - Ventilá adecuadamente los ambientes.",
+        " - No compartas mate, vajilla ni demás objetos de uso personal.",
+        " - Limpialos con agua y detergente después de cada uso.",
+        " - Limpiá y desinfectá superficies y objetos de uso frecuente (mesas, mesadas, sillas y otros utilizados diariamente) de la siguiente manera:",
+        " -- Lavá con una solución de agua y detergente.",
+        " -- Enjuagá con agua limpia.",
+        " -- Desinfectá con una solución de 10 ml (2 cucharadas soperas) de lavandina de uso comercial en 1 litros de agua",
+        " - Las personas mayores de 60 años, embarazadas o quienes están dentro de los grupos de riesgo no deben convivir con quienes volvieron de zonas afectadas.",
+        " - Ante la presencia de síntomas (fiebre de 38° acompañada de tos, dolor de garganta, cansancio o falta de aire), comunicate telefónicamente y de inmediato con el servicio de salud de tu jurisdicción /Telefonos .",
+        " - Es importante cuidar especialmente a las personas mayores de 60, mujeres embarazadas y quienes tengan afecciones crónicas (enfermedad cardiovascular, diabetes y enfermedad respiratoria crónica, entre otras).",
+        " - En la medida de lo posible, delegá la realización de mandados o compra de medicamentos a personas de confianza o del entorno familiar que no pertenezcan a los grupos de riesgo.",
+        "",
+        "▶️ Cuidarte es cuidarnos.",
+        menu_principal + medidas
+    ],
+    # Medidas -> AislamientoSocial -> Salida
+    "/AislamientoSocialSalidas": [
+        "<b>Al momento de ir a la farmacia o hacer compras de primera necesidad</b>",
+        " - Pueden ir <b>quienes no presenten síntomas</b> (fiebre de 38° acompañada de tos, dolor de garganta, cansancio o falta de aire).",
+        " - Siempre que se pueda, <b>deben quedarse en casa</b> las personas mayores de 60 años, mujeres embarazadas y quienes tienen afecciones crónicas.",
+        " - Solo debe salir <b>una persona</b>.",
+        " - <b>Preguntá a tus vecinos si necesitan algún producto</b>. Podés dejarlos en la puerta de su casa.",
+        "",
+        "<b>En el comercio</b>",
+        " - <b>Mantené una distancia de 1 metro</b> de los demás y evitá los lugares con muchas personas.",
+        " - <b>Evitá tocarte la cara</b>.",
+        " - <b>Si vas a toser o estornudar</b>, hacelo en el pliegue del codo.",
+        " - <b>No toques los productos</b> si no es necesario. Pensar de antemano qué se necesita comprar.",
+        " - <b>Comprá cantidades razonables</b>, sin exagerar: <b>seamos considerados con los demás</b>.",
+        " - De ser posible, <b>pagá con tarjeta</b>.",
+        "",
+        "<b>¿Cómo cuidarnos al regresar a casa?</b>",
+        " - Al volver a casa, <b>tratá no tocar nada antes de lavarte bien las manos</b>.",
+        " - Dejá en la entrada bolsos, cartera, llaves, abrigo, etc.",
+        " - <b>Desinfectá el celular, anteojos, abrigos</b> u otros con alcohol al 70% (por ejemplo, en un rociador, 7 partes de alcohol con 3 partes de agua destilada o hervida)",
+        "",
+        "<b>Actuemos con solidaridad</b>, siendo <b>respetuosos</b> y <b>amables</b> con todos los demás.",
+        "Tené en cuenta que <b>el objetivo es frenar el contacto con el virus</b>.",
+        "",
+        "▶️ Cuidarte es cuidarnos.",
+        menu_principal + medidas
+    ],
+    # Medidas -> AislamientoSocial -> AislamientoSocialPerros
+    "/AislamientoSocialPerros": [
+        "Te acercamos una serie de recomendaciones importantes para cuidar la salud de tu mascota, la tuya y la de todos durante el período de aislamiento social, preventivo y obligatorio",
+        "",
+        " - Las mascotas pueden ser sacadas afuera (no a pasear) solo por una persona.",
+        " - La distancia de recorrida durante el paseo debe ser la mínima posible, en las inmediaciones de la casa.",
+        " - Se debe llevar lavandina para echar sobre la orina y sobre el lugar en el que se recogieron las heces del animal.",
+        " - Durante el paseo se deben guardar las medidas de distanciamiento social y respetar las pautas de higiene recomendadas para las personas.",
+        " - Al regresar, es necesario desinfectar las patas de las mascotas, con agua y jabón, y luego lavarse bien las manos y cambiarse la ropa.",
+        " - Los paseos deben hacerse a la mañana temprano y a la noche.",
+        menu_principal + medidas
+    ],
+    # Medidas -> AislamientoSocial -> AislamientoSocialServicios
+    "/AislamientoSocialServicios": [
+        "<b>Línea 144 de asistencia por violencia de género</b>",
+        "El Ministerio de las Mujeres, Géneros y Diversidad desarrolló una aplicación gratuita que, de manera complementaria a la línea 144, brinda contención y asesoramiento ante situaciones de violencia de género.",
+        "<a href='https://www.argentina.gob.ar/aplicaciones/linea-144-atencion-mujeres'>Descargá la aplicación</a>",
+        "",
+        "<b>Línea 141 de asistencia por consumos problemáticos y guía de recomendaciones</b>",
+        "La SEDRONAR ofrece atención gratuita para asistir y responder consultas respecto de situaciones de consumo de sustancias las 24 horas a través de la línea 141, y recomendaciones para Comunidades Terapéuticas y Casas con Convivencia, y para aquellos que asisten a personas en situación de calle.",
+        "<a href='https://www.argentina.gob.ar/sedronar/covid-19'>Leé la información de SEDRONAR</a>",
+        "",
+        "<b>Trámites a distancia</b>",
+        "A través de la plataforma TAD podés realizar trámites ante organismos públicos nacionales desde tu casa. Aquellos que son pagos pueden abonarse en la misma plataforma.",
+        "<a href='https://www.argentina.gob.ar/jefatura/innovacion-publica/administrativa/tramites-a-distancia'>Conocé como usar TAD</a>",
+        "",
+        "<b>Detalles del aislamiento en video</b>",
+        "La Agencia Nacional de Discapacidad pone a disposición un video que incluye explicación en lenguaje de señas argentina.",
+        "<a href='https://youtu.be/uZcFreMhODs'>Mirá el video</a>",
+        "",
+        "<b>Seguimos educando, un portal de recursos educativos en línea</b>",
+        "Con el objetivo de colaborar con la continuidad de las actividades de enseñanza en el sistema educativo nacional, el Ministerio de Educación de la Nación ofrece actividades, videos, libros digitales, series y otros contenidos del portal educ.ar. Además, la <a href='https://www.tvpublica.com.ar/programa/seguimos-educando/'>Televisión Pública</a> emitirá 4 horas diarias de contenidos educativos de las señales <a href='http://encuentro.gob.ar/'>Encuentro</a> y <a href='http://encuentro.gob.ar/'>Pakapaka</a>.",
+        "<a href='https://www.educ.ar/recursos/150936/seguimos-educando'>Conocé Seguimos Educando</a>",
+        "",
+        "<b>Plataforma de contenidos Contar</b>",
+        "Además de sumarse a la iniciativa del Ministerio de Educación y ofrecer una selección de contenidos didácticos, esta plataforma reúne las propuestas del Sistema de Medios Públicos; TV Pública, Canal Encuentro, PakaPaka, DeportTV, espectáculos de Tecnópolis y CCK. El acceso al contenido es totalmente gratuito y está disponible tanto a través de la web como de aplicaciones para iOS y Android.",
+        "<a href='https://www.cont.ar/'>Ingresá a Contar</a>",
+        menu_principal + medidas
+    ],
     # Medidas -> AislamientoSocial -> Decreto
     "/DNU2602020": [
         "El Presidente de la Nación firmó el 12 de marzo de 2020 el Decreto de Necesidad y Urgencia que amplía la Emergencia Sanitaria y dispone la adopción de nuevas medidas para contener la propagación del nuevo coronavirus.",
@@ -432,15 +535,62 @@ answers = {
     "/Informe": [
         "Informe oficial: https://www.argentina.gob.ar/coronavirus/informe-diario",
         "",
-        "PHOTO|https://ibin.co/5GcXDq32LIso.png|Fuente del gráfico El Gato y la Caja",
+        "PHOTO|https://ibin.co/5Gjjw4pDXqeQ.png|Fuente del gráfico El Gato y la Caja",
         menu_principal
     ],
     # Preguntas frecuentes
     "/Preguntas": faqs + [menu_principal],
     # Telefonos
-    "/Telefonos": ["https://www.argentina.gob.ar/coronavirus/telefonos"],
-    "/Plan": ["https://www.argentina.gob.ar/salud/coronavirus-COVID-19/plan-operativo"],
-    "/Autotest": ["https://www.argentina.gob.ar/coronavirus/app"]
+    "/Telefonos": [
+        "<b>Teléfonos y contactos útiles</b>",
+        "",
+        "☎️ <b>0800-222-1002</b>",
+        "0800 Salud Responde, opción 1. Teléfono gratuito para llamados desde todo el país.",
+        "",
+        "📞 <b>134</b>",
+        "Para denunciar a quienes violen la cuarentena, comunicate con el Ministerio de Seguridad al número gratuito 134.",
+        "",
+        "🌐 <b>Asistencia a los argentinos en el exterior</b>",
+        "Podés escribir a estos correos electrónicos de la Cancillería argentina dependiendo del lugar donde te encuentres.",
+        " - Europa: covideuropa@cancilleria.gob.ar",
+        " - Estados Unidos y Canadá: covidnorte@cancilleria.gob.ar",
+        " - América Central, Caribe y México: covidcentral@cancilleria.gob.ar",
+        " - América del Sur: covidsur@cancilleria.gob.ar",
+        " - Asia, Oceanía, Africa y Medio Oriente: covidrestmun@cancilleria.gob.ar",
+        "",
+        "📱 <b>Videollamada para personas sordas e hipoacúsicas</b>",
+        "La Agencia Nacional de Discapacidad ofrece un servicio exclusivo para personas con discapacidad auditiva, el número 11-5728-4011, disponible de lunes a viernes de 10 a 15 horas.",
+        "",
+        "Para ver los teléfonos por jurisdicción visitar: https://www.argentina.gob.ar/coronavirus/telefonos",
+        menu_principal
+    ],
+    "/Plan": [
+        "https://www.argentina.gob.ar/salud/coronavirus-COVID-19/plan-operativo",
+        menu_principal
+    ],
+    "/Salud": [
+        "<b>Situación epidemiológica</b>",
+        "El 31 de diciembre de 2019, China notificó la detección de casos confirmados por laboratorio de una nueva infección por coronavirus (COVID-19) que posteriormente fueron confirmados en varios países de distintos continentes. La evolución de este brote motivó la declaración de la OMS de una emergencia de salud pública de importancia internacional (ESPII).",
+        "",
+        "Para consultar información actualizada sobre número de casos detectados, fallecidos y la localización de los mismos, referirse a <a href='https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/'>Reportes de Situación OMS- sólo en inglés</a>.",
+        "",
+        "A la fecha, la Organización Mundial de la Salud continúa la investigación sobre el nuevo patógeno y el espectro de manifestaciones que pueda causar, la fuente de infección, el modo de transmisión, el periodo de incubación, la gravedad de la enfermedad y las medidas específicas de control.",
+        "",
+        "La evidencia actual sugiere que la propagación de persona a persona está ocurriendo, incluso entre los trabajadores de la salud que atienden a pacientes enfermos de COVID-19, lo que sería consistente con lo que se sabe sobre otros patógenos similares como el SARS y el coronavirus causante del MERS- CoV.",
+        "",
+        "<b>Declaración de la OMS</b>",
+        "El 30 de enero de 2020, el Director General de la OMS declaró que el brote del nuevo coronavirus constituye una emergencia de salud pública de importancia internacional (ESPII) en el marco del Reglamento Sanitario Internacional.",
+        "Con la consecuente emisión de recomendaciones tanto para el país donde se está produciendo el evento, como para el resto de los países y a la comunidad global. Donde se destacan que se espera que una mayor exportación internacional de casos pueda aparecer en cualquier país.",
+        "todos los países deben estar preparados para la contención, incluida la vigilancia activa, la detección temprana, el aislamiento y el manejo de casos, el seguimiento de contactos y la prevención de la propagación de la infección por COVID-19, y compartir datos completos con la OMS.",
+        "El 11 de marzo de 2020, el director general de la OMS declaró el estado de <a href='https://www.who.int/es/dg/speeches/detail/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020'>pandemia</a>.",
+        "",
+        "▶️ <a href='http://www.msal.gob.ar/index.php?filter_problematica=100&filter_soporte=0&palabra_clave=&option=com_bes_contenidos'>Materiales para equipos de salud</a>",
+        menu_principal
+    ],
+    "/Autotest": [
+        "https://www.argentina.gob.ar/coronavirus/app",
+        menu_principal
+    ]
 }
 
 answers.update(faq_answers)
