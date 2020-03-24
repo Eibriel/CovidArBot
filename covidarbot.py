@@ -261,12 +261,12 @@ cuidados = " - Cuidados /Cuidados"
 aislamiento = " - Aislamiento /Aislamiento"
 medidas = " - Medidas /Medidas"
 preguntas = " - Preguntas /Preguntas"
-preguntas = " - Rumores /Rumores"
+rumores = " - Rumores /Rumores"
 
 
 faqs, faq_answers = faq2menu(preguntas_frecuentes, "faq", [menu_principal + preguntas])
 
-oms_faqs, oms_faq_answers = faq2menu(mitos_oms, "rumor", [menu_principal + preguntas])
+oms_faqs, oms_faq_answers = faq2menu(mitos_oms, "rumor", [menu_principal + rumores])
 
 answers = {
     "/help": [
