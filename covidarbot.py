@@ -186,18 +186,72 @@ preguntas_frecuentes = {
 
 
 mitos_oms = {
-    ""
+    "El virus COVID-19 puede transmitirse en zonas con climas cálidos y húmedos": [
+        "Las pruebas científicas obtenidas hasta ahora indican que el virus de la COVID-19 puede transmitirse en CUALQUIER ZONA, incluidas las de clima cálido y húmedo. Con independencia de las condiciones climáticas, hay que adoptar medidas de protección si se vive en una zona donde se hayan notificado casos de COVID-19 o si se viaja a ella. La mejor manera de protegerse contra la COVID-19 es lavarse las manos con frecuencia. De esta manera se eliminan los virus que puedan estar en las manos y se evita la infección que podría producirse al tocarse los ojos, la boca y la nariz. "
+    ],
+    "El frío y la nieve NO PUEDEN matar el nuevo coronavirus (2019-nCoV)": [
+        "La temperatura normal del cuerpo humano se mantiene en torno a 36,5° y 37°, con independencia de la temperatura exterior o de las condiciones meteorológicas. Por lo tanto, no hay razón para creer que el frío pueda matar el nuevo coronavirus o acabar con otras enfermedades. La forma más eficaz de protegerse contra el 2019-nCoV es limpiarse las manos frecuentemente con un desinfectante a base de alcohol o con agua y jabón."
+    ],
+    "Bañarse en agua caliente no previene la infección por el nuevo coronavirus": [
+        "Bañarse en agua caliente no proporciona ninguna protección contra la COVID-19. Con independencia de la temperatura del agua de la bañera o la ducha, la temperatura corporal continuará siendo de 36,5 °C a 37 °C. De hecho, si el agua está muy caliente puede uno quemarse. Lo mejor que se puede hacer para protegerse de la COVID-19 es lavarse las manos con frecuencia para eliminar los virus que pueda haber en su superficie y no contagiarnos al tocarnos los ojos, la boca y la nariz."
+    ],
+    "El nuevo coronavirus NO PUEDE transmitirse a través de picaduras de mosquitos": [
+        "El nuevo coronavirus es un virus respiratorio que se propaga principalmente por contacto con una persona infectada a través de las gotículas respiratorias que se generan cuando esta persona tose o estornuda, por ejemplo, o a través de gotículas de saliva o secreciones de la nariz. Hasta la fecha no hay información ni pruebas que indiquen que el 2019-nCoV pueda transmitirse por medio de mosquitos. Para protegerse, evite el contacto cercano con cualquier persona que tenga fiebre y tos, y practique una buena higiene de las manos y de las vías respiratorias."
+    ],
+    "¿Se puede matar el nuevo coronavirus con un secador de manos?": [
+        "No. Los secadores de manos no matan el 2019-nCoV. Para protegerse contra el nuevo coronavirus (2019-nCoV), lávese las manos frecuentemente con un gel hidroalcohólico o con agua y jabón. Una vez limpias, séqueselas bien con toallitas de papel o con un secador de aire caliente."
+    ],
+    "¿Se puede matar el 2019-nCoV con una lámpara ultravioleta para desinfección?": [
+        "No se deben utilizar lámparas ultravioletas para esterilizar las manos u otras partes del cuerpo, ya que la radiación ultravioleta puede causar eritemas (irritación de la piel)."
+    ],
+    "¿Se puede matar el nuevo coronavirus rociando el cuerpo con alcohol o con cloro?": [
+        "No. Rociar todo el cuerpo con alcohol o cloro no sirve para matar los virus que ya han entrado en el organismo. Pulverizar estas sustancias puede dañar la ropa y las mucosas (es decir, los ojos, la boca, etc.). Tanto el alcohol como el cloro pueden servir para desinfectar las superficies, siempre que se sigan las recomendaciones pertinentes. ",
+        "",
+        "Hay varias medidas que se pueden aplicar para protegerse del nuevo coronavirus. Empiece por limpiarse las manos con frecuencia con un gel hidroalcohólico o con agua y jabón."
+    ],
+    "Las vacunas contra la neumonía, ¿protegen contra el nuevo coronavirus?": [
+        "No. Las vacunas contra la neumonía, como la neumocócica y la vacuna contra Haemophilus influenzae de tipo B (Hib), no protegen contra el nuevo coronavirus.",
+        "",
+        "El 2019-nCoV es tan nuevo y diferente que es necesario desarrollar una vacuna específica, en la que ya se está trabajando con el apoyo de la OMS.",
+        "",
+        "Aunque las vacunas contra la neumonía no son eficaces contra el 2019‑nCoV, es muy conveniente vacunarse contra las enfermedades respiratorias para mantener una buena salud."
+    ],
+    "¿Conviene enjuagarse regularmente la nariz con una solución salina para prevenir la infección por el nuevo coronavirus?": [
+        "No. No hay pruebas que indiquen que esta práctica proteja de la infección por el nuevo coronavirus.",
+        "",
+        "Aunque algunas pruebas indican que enjuagarse la nariz regularmente con solución salina puede acelerar la recuperación tras un resfriado común, no se ha demostrado que prevenga las infecciones respiratorias."
+    ],
+    "¿Comer ajo puede ayudar a prevenir la infección por el nuevo coronavirus?": [
+        "El ajo es un alimento saludable que puede tener algunas propiedades antimicrobianas. Sin embargo, no se han obtenido pruebas de que comerlo proteja contra el virus que causa el brote actual."
+    ],
+    "El nuevo coronavirus, ¿afecta solo a las personas de edad o también puede afectar a las más jóvenes?": [
+        "El nuevo coronavirus (2019-nCoV) puede infectar a personas de todas las edades, si bien se ha observado que las personas mayores y las que padecen algunas enfermedades (como el asma, la diabetes o las cardiopatías) tienen más probabilidades de enfermarse gravemente cuando adquieren la infección.",
+        "",
+        "La OMS aconseja a las personas de todas las edades que tomen medidas para protegerse del virus, por ejemplo, mediante una buena higiene de manos y respiratoria."
+    ],
+    "¿Son eficaces los antibióticos para prevenir y tratar la infección por el nuevo coronavirus?": [
+        "No. Los antibióticos son eficaces contra las bacterias, pero no contra los virus.",
+        "",
+        "Puesto que el nuevo coronavirus (2019-nCoV) es un virus, no deben utilizarse antibióticos ni para prevenir ni para tratar la infección.",
+        "",
+        "Sin embargo, si resulta usted infectado por este virus y le hospitalizan, es posible que le administren antibióticos para que no contraiga infecciones bacterianas."
+    ],
+    "¿Hay algún medicamento para prevenir o tratar la infección por el nuevo coronavirus?": [
+        "Por el momento, no se recomienda ningún medicamento específico para prevenir o tratar la infección por el nuevo coronavirus (2019-nCoV).",
+        "",
+        "Sin embargo, es necesario atender adecuadamente a las personas infectadas por este virus para aliviar y tratar los síntomas y procurar medidas de apoyo optimizadas a los que presenten síntomas graves. Se están estudiando algunos tratamientos específicos que se probarán en ensayos clínicos. La OMS está ayudando a agilizar las labores de investigación y desarrollo con una serie de asociados."
+    ]
 }
 
 
-def faq2menu(preguntas_frecuentes, menu):
+def faq2menu(preguntas_frecuentes, prefix, menu):
     faqs = []
     faq_answers = {}
     i = 0
     for pfi in preguntas_frecuentes:
-        command = "/faq{}".format(i)
-        faqs.append(" - {} {}".format(pfi, command))
-        faq_answers[command] = [pfi, "-"] + preguntas_frecuentes[pfi] + menu
+        command = "/{}{}".format(prefix, i)
+        faqs.append(" ❓ {} {}".format(pfi, command))
+        faq_answers[command] = ["<b>{}</b>".format(pfi), "-"] + preguntas_frecuentes[pfi] + menu
         i += 1
     return faqs, faq_answers
 
@@ -207,10 +261,12 @@ cuidados = " - Cuidados /Cuidados"
 aislamiento = " - Aislamiento /Aislamiento"
 medidas = " - Medidas /Medidas"
 preguntas = " - Preguntas /Preguntas"
+preguntas = " - Rumores /Rumores"
 
 
-faqs, faq_answers = faq2menu(preguntas_frecuentes, [menu_principal + preguntas])
+faqs, faq_answers = faq2menu(preguntas_frecuentes, "faq", [menu_principal + preguntas])
 
+oms_faqs, oms_faq_answers = faq2menu(mitos_oms, "rumor", [menu_principal + preguntas])
 
 answers = {
     "/help": [
@@ -241,7 +297,9 @@ answers = {
         "",
         "🔹 [Nuevo] Servicios y enlaces útiles mientras estés en casa /AislamientoSocialServicios",
         "",
-        "Última actualización: <b>2020-03-23</b>",
+        "🔹 [Nuevo] Acerca de los rumores sobre el nuevo coronavirus /Rumores",
+        "",
+        "Última actualización: <b>2020-03-24</b>",
         menu_principal
     ],
     # Cuidados
@@ -540,7 +598,7 @@ answers = {
         menu_principal
     ],
     # Preguntas frecuentes
-    "/Preguntas": faqs + [menu_principal],
+    "/Preguntas": ["<b>Preguntas frecuentes sobre SARS-COV2 y enfermedad por coronavirus (COVID-19)</b>\n"] + faqs + [menu_principal],
     # Telefonos
     "/Telefonos": [
         "<b>Teléfonos y contactos útiles</b>",
@@ -591,10 +649,14 @@ answers = {
     "/Autotest": [
         "https://www.argentina.gob.ar/coronavirus/app",
         menu_principal
-    ]
+    ],
+    # Rumores OMS
+    "/Rumores": ["<b>Consejos para la población acerca de los rumores sobre el nuevo coronavirus (2019-nCoV)</b> (Por la OMS, 13 de marzo de 2020)\n"] + oms_faqs + [menu_principal],
 }
 
 answers.update(faq_answers)
+
+answers.update(oms_faq_answers)
 
 # Configure Telegram connection
 telegram_conection = telegram("CovidArBot", Config.telegram_token, "8979")
