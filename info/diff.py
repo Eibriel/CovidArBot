@@ -1,8 +1,8 @@
 import csv
 from difflib import Differ
 
-file_a = "covidar_2020-03-23.csv"
-file_b = "covidar_2020-03-24.csv"
+file_a = "covidar_2020-03-24.csv"
+file_b = "covidar_2020-03-25.csv"
 
 
 def csv2dict(filepath):

@@ -299,7 +299,7 @@ answers = {
         "",
         "🔹 [Nuevo] Acerca de los rumores sobre el nuevo coronavirus /Rumores",
         "",
-        "Última actualización: <b>2020-03-24</b>",
+        "Última actualización: <b>2020-03-25</b>",
         menu_principal
     ],
     # Cuidados
@@ -450,6 +450,9 @@ answers = {
         "",
         "<b>Decreto de Necesidad y Urgencia 260/2020</b> /DNU2602020",
         "El DNU amplía la Emergencia Sanitaria y dispone la adopción de medidas para contener la propagación del nuevo coronavirus.",
+        "",
+        "Ver <a href='https://www.argentina.gob.ar/coronavirus/medidas-gobierno'>línea de tiempo de medidas</a>."
+        "",
         menu_principal
     ],
     # Medias -> AislamientoSocial
@@ -594,7 +597,9 @@ answers = {
     "/Informe": [
         "Informe oficial: https://www.argentina.gob.ar/coronavirus/informe-diario",
         "",
-        "PHOTO|https://ibin.co/5Gjjw4pDXqeQ.png|Fuente del gráfico El Gato y la Caja",
+        "<a href='https://www.argentina.gob.ar/sites/default/files/covid19_informe-diario-matutino-25-03.pdf'>Reporte Diario Matutino - 25-03-2020</a>",
+        "",
+        "PHOTO|https://ibin.co/5GnkBUQf7rsy.png|Fuente del gráfico El Gato y la Caja",
         menu_principal
     ],
     # Preguntas frecuentes
