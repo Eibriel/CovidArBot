@@ -299,7 +299,7 @@ answers = {
         "",
         "🔹 [Nuevo] Acerca de los rumores sobre el nuevo coronavirus /Rumores",
         "",
-        "Última actualización: <b>2020-03-25</b>",
+        "Última actualización: <b>2020-03-27</b>",
         menu_principal
     ],
     # Cuidados
@@ -339,7 +339,7 @@ answers = {
         "",
         "Las personas mayores de 60 años, embarazadas o quienes están dentro de los grupos de riesgo <b>no deben convivir con personas que vengan desde el exterior.</b>",
         "",
-        "Vacunarse contra la gripe y el neumococo, de acuerdo al calendario de vacunación nacional.",
+        "Las personas mayores de 65 años deben vacunarse contra la gripe y el neumococo de acuerdo al calendario nacional de vacunación.",
         "",
         "Información sobre licencia laboral para mayores de 60 años, embarazadas y menores de 60 años con factores de riesgo /LicenciaMayores60",
         "PHOTO|https://ibin.co/5GkUzRTrggz1.jpg|Cuidados para mayores de 65 años",
@@ -597,9 +597,9 @@ answers = {
     "/Informe": [
         "Informe oficial: https://www.argentina.gob.ar/coronavirus/informe-diario",
         "",
-        "<a href='https://www.argentina.gob.ar/sites/default/files/covid19_informe-diario-matutino-25-03.pdf'>Reporte Diario Matutino - 25-03-2020</a>",
+        " - <a href='https://www.argentina.gob.ar/sites/default/files/27-03-20-reporte-diario-matutino-covid-19.pdf'>Reporte Diario Matutino - 27-03-2020</a>",
         "",
-        "PHOTO|https://ibin.co/5GnkBUQf7rsy.png|Fuente del gráfico El Gato y la Caja",
+        "PHOTO|https://ibin.co/5H6qK0BZbjzU.png|Fuente del gráfico El Gato y la Caja",
         menu_principal
     ],
     # Preguntas frecuentes
