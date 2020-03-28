@@ -595,11 +595,13 @@ answers = {
     ],
     # Informe diario
     "/Informe": [
-        "Informe oficial: https://www.argentina.gob.ar/coronavirus/informe-diario",
+        "📺 <a href='https://www.youtube.com/watch?v=CG8CzltUbvI'>Reporte diario desde el Ministerio de Salud - Nuevo coronavirus COVID-19</a>",
         "",
-        " - <a href='https://www.argentina.gob.ar/sites/default/files/27-03-20-reporte-diario-matutino-covid-19.pdf'>Reporte Diario Matutino - 27-03-2020</a>",
+        "📝 <a href='https://www.argentina.gob.ar/coronavirus/informe-diario'>Listado de informes diarios</a>",
         "",
-        "PHOTO|https://ibin.co/5H6qK0BZbjzU.png|Fuente del gráfico El Gato y la Caja",
+        # " - <a href='https://www.argentina.gob.ar/sites/default/files/27-03-20-reporte-diario-vespertino-covid-19.pdf'>Reporte Diario Vespertino - 27-03-2020</a>",
+        # "",
+        "PHOTO|https://ibin.co/5HAdGXE0fQqn.png|Casos nuevos por día. Fuente del gráfico: El Gato y la Caja",
         menu_principal
     ],
     # Preguntas frecuentes
