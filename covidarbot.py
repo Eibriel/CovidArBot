@@ -299,7 +299,7 @@ answers = {
         "",
         "🔹 [Nuevo] Acerca de los rumores sobre el nuevo coronavirus /Rumores",
         "",
-        "Última actualización: <b>2020-03-27</b>",
+        "Última actualización: <b>2020-03-29 12:45</b>",
         menu_principal
     ],
     # Cuidados
@@ -339,7 +339,7 @@ answers = {
         "",
         "Las personas mayores de 60 años, embarazadas o quienes están dentro de los grupos de riesgo <b>no deben convivir con personas que vengan desde el exterior.</b>",
         "",
-        "Las personas mayores de 65 años deben vacunarse contra la gripe y el neumococo de acuerdo al calendario nacional de vacunación.",
+        "Las personas de 65 años y más deben vacunarse contra la gripe y el neumococo de acuerdo al calendario de vacunación nacional.",
         "",
         "Información sobre licencia laboral para mayores de 60 años, embarazadas y menores de 60 años con factores de riesgo /LicenciaMayores60",
         "PHOTO|https://ibin.co/5GkUzRTrggz1.jpg|Cuidados para mayores de 65 años",
@@ -595,13 +595,13 @@ answers = {
     ],
     # Informe diario
     "/Informe": [
-        "📺 <a href='https://www.youtube.com/watch?v=CG8CzltUbvI'>Reporte diario desde el Ministerio de Salud - Nuevo coronavirus COVID-19</a>",
+        "📺 <a href='https://www.youtube.com/watch?v=WdCyp4YcNGI'>Reporte diario desde el Ministerio de Salud - Nuevo coronavirus COVID-19</a>",
         "",
         "📝 <a href='https://www.argentina.gob.ar/coronavirus/informe-diario'>Listado de informes diarios</a>",
         "",
         # " - <a href='https://www.argentina.gob.ar/sites/default/files/27-03-20-reporte-diario-vespertino-covid-19.pdf'>Reporte Diario Vespertino - 27-03-2020</a>",
         # "",
-        "PHOTO|https://ibin.co/5HAdGXE0fQqn.png|Casos nuevos por día. Fuente del gráfico: El Gato y la Caja",
+        "PHOTO|https://ibin.co/5HIaoOvWiFN2.png|Casos nuevos por día. Fuente del gráfico: El Gato y la Caja",
         menu_principal
     ],
     # Preguntas frecuentes
