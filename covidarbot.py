@@ -299,7 +299,7 @@ answers = {
         "",
         "🔹 [Nuevo] Acerca de los rumores sobre el nuevo coronavirus /Rumores",
         "",
-        "Última actualización: <b>2020-03-29 12:45</b>",
+        "Última actualización: <b>2020-04-01 11:20</b>",
         menu_principal
     ],
     # Cuidados
@@ -595,13 +595,13 @@ answers = {
     ],
     # Informe diario
     "/Informe": [
-        "📺 <a href='https://www.youtube.com/watch?v=MlJ9CP-0RIU'>Reporte diario desde el Ministerio de Salud - Nuevo coronavirus COVID-19</a>",
+        "📺 <a href='https://www.youtube.com/watch?v=-20rVnYRZrI'>Reporte diario desde el Ministerio de Salud - Nuevo coronavirus COVID-19</a>",
         "",
         "📝 <a href='https://www.argentina.gob.ar/coronavirus/informe-diario'>Listado de informes diarios</a>",
         "",
         # " - <a href='https://www.argentina.gob.ar/sites/default/files/27-03-20-reporte-diario-vespertino-covid-19.pdf'>Reporte Diario Vespertino - 27-03-2020</a>",
         # "",
-        "PHOTO|https://ibin.co/5HSiNddMbKE3.png|Casos nuevos por día. Fuente del gráfico: El Gato y la Caja",
+        "PHOTO|https://ibin.co/5HdD3xLtmL29.png|Casos nuevos por día. Fuente del gráfico: El Gato y la Caja",
         menu_principal
     ],
     # Preguntas frecuentes
