@@ -299,7 +299,7 @@ answers = {
         "",
         "🔹 [Nuevo] Acerca de los rumores sobre el nuevo coronavirus /Rumores",
         "",
-        "Última actualización: <b>2020-04-01 11:20</b>",
+        "Última actualización: <b>2020-04-04 13:05</b>",
         menu_principal
     ],
     # Cuidados
@@ -595,13 +595,13 @@ answers = {
     ],
     # Informe diario
     "/Informe": [
-        "📺 <a href='https://www.youtube.com/watch?v=-20rVnYRZrI'>Reporte diario desde el Ministerio de Salud - Nuevo coronavirus COVID-19</a>",
+        "📺 <a href='https://www.youtube.com/watch?v=iekxd0zjnmo'>Reporte diario desde el Ministerio de Salud - Nuevo coronavirus COVID-19</a>",
         "",
         "📝 <a href='https://www.argentina.gob.ar/coronavirus/informe-diario'>Listado de informes diarios</a>",
         "",
         # " - <a href='https://www.argentina.gob.ar/sites/default/files/27-03-20-reporte-diario-vespertino-covid-19.pdf'>Reporte Diario Vespertino - 27-03-2020</a>",
         # "",
-        "PHOTO|https://ibin.co/5HdD3xLtmL29.png|Casos nuevos por día. Fuente del gráfico: El Gato y la Caja",
+        "PHOTO|https://ibin.co/5Hyd3uhogctv.png|Curva de casos. Fuente del gráfico: Juan Andres Fraire (Twitter)",
         menu_principal
     ],
     # Preguntas frecuentes
@@ -615,6 +615,11 @@ answers = {
         "",
         "📞 <b>134</b>",
         "Para denunciar a quienes violen la cuarentena, comunicate con el Ministerio de Seguridad al número gratuito 134.",
+        "",
+        "💬 <b>Whatsapp y Facebook Messenger</b>",
+        "Sumamos dos chats para que encuentres respuestas a las preguntas más frecuentes y recibas consejos de prevención.",
+        "<b>Whatsapp</b>: escribí \"Hola\" (sin comillas) al número +54 9 11 2256-0566 y comenzá a chatear.",
+        "<b>Facebook Messenger</b>: en tu celular, abrí la aplicación Messenger e ingresá a la cuenta msalnacion. Si estás en una computadora, ingresá a https://www.messenger.com/t/msalnacion con tu cuenta de Facebook.",
         "",
         "🌐 <b>Asistencia a los argentinos en el exterior</b>",
         "Podés escribir a estos correos electrónicos de la Cancillería argentina dependiendo del lugar donde te encuentres.",
